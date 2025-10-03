@@ -31,7 +31,7 @@ npm run dev
 
 ---
 
-### **2️⃣ Lägg till Endpoints**
+### **Endpoints**
 Det är bra att ha ett litet avsnitt som beskriver dina endpoints. Exempel:  
 
 ```markdown

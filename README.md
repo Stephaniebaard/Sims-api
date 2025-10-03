@@ -32,10 +32,9 @@ npm run dev
 ---
 
 ### **Endpoints**
-Det är bra att ha ett litet avsnitt som beskriver dina endpoints. Exempel:  
 
 ```markdown
-## Endpoints
+
 
 | HTTP | Endpoint        | Beskrivning                                |
 |------|----------------|-------------------------------------------|

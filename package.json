@@ -1,20 +1,22 @@
 {
   "name": "sims-api",
   "version": "1.0.0",
-  "description": "",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-esm src/index.ts"
+    "dev": "node --loader ts-node/esm src/index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.3",
     "@types/node": "^24.5.2",
+    "prisma": "^6.16.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.0"
   }
 }

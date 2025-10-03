@@ -1,0 +1,43 @@
+
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Varld {
+  id          Int     @id @default(autoincrement())
+  namn        String
+  beskrivning String
+  tomter      Tomt[]
+}
+
+model Tomt {
+  id       Int     @id @default(autoincrement())
+  namn     String
+  beskrivning String
+  pris     Float
+  varldId  Int
+  varld    Varld   @relation(fields: [varldId], references: [id])
+}
+
+model Familj {
+  id      Int     @id @default(autoincrement())
+  namn    String
+  datum   DateTime
+  sims    Sim[]
+}
+
+model Sim {
+  id        Int     @id @default(autoincrement())
+  fnamn     String
+  enamn     String
+  alder     String
+  familjId  Int
+  familj    Familj  @relation(fields: [familjId], references: [id])
+  egenskaper String
+}
